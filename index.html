@@ -118,7 +118,650 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/assets/site.css">
+  
+  <style>
+    :root {
+      --primary: #0c2d48;
+      --primary-dark: #071c2e;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1ebe57;
+      --price: #e85d04;
+      --price-bg: #fff4e6;
+      --bg: #ffffff;
+      --bg-alt: #f7f9fc;
+      --text: #1a1a1a;
+      --text-muted: #4a5568;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(12, 45, 72, 0.08);
+      --shadow-lg: 0 8px 28px rgba(12, 45, 72, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang HK", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ========== 1. 頂部選單 ========== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      color: #333333;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border-radius: 6px;
+    }
+
+    .logo-icon img {
+      width: auto;
+      height: 61px;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      margin-top: 0;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.2;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 400px) {
+      .logo-text {
+        font-size: 16px;
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .phone-btn:hover,
+    .phone-btn:active {
+      background: var(--primary-dark);
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      color: #1a1a1a;
+      border: 1px solid var(--border);
+      padding: 7px 12px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .lang-btn:hover,
+    .lang-btn:active {
+      background: #e2e8f0;
+    }
+
+    .nav-toggle {
+      display: none; /* 單頁簡單，暫不用漢堡 */
+    }
+
+    /* ========== 2. Hero ========== */
+    .hero {
+      background: var(--bg-alt);
+      padding: 28px 16px 36px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--whatsapp);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-whatsapp:hover,
+    .btn-whatsapp:active {
+      background: var(--whatsapp-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    .hero-img-wrap {
+      margin-top: 28px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: #dce3eb;
+      aspect-ratio: 16 / 10;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ========== 通用 section ========== */
+    .section {
+      padding: 40px 16px;
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== 3. 套餐價錢卡 ========== */
+    .packages {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .package-card {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .package-card.featured {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .package-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+    }
+
+    .package-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+
+    .package-price {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .package-price .from {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .package-price .amount {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--price);
+      line-height: 1.1;
+    }
+
+    .package-price .unit {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .package-list {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+
+    .package-list li {
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .package-list li:last-child {
+      border-bottom: none;
+    }
+
+    .package-list li::before {
+      content: "✓";
+      color: var(--whatsapp);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .package-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    /* 加配服務橫欄 */
+    .addon-bar {
+      margin-top: 28px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .addon-bar h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .addon-bar p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .addon-bar .btn-whatsapp {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+
+    /* ========== 4. 案例區 ========== */
+    .cases {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .case-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .case-header {
+      padding: 14px 16px 10px;
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .case-title {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .case-meta {
+      font-size: 13px;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    .case-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #e2e8f0;
+    }
+
+    .case-img-box {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: #d0d7e0;
+      overflow: hidden;
+    }
+
+    .case-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .case-label {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .case-desc {
+      padding: 12px 16px 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* ========== 5. 點解揀我 ========== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .why-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      box-shadow: var(--shadow);
+    }
+
+    .why-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .why-content h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .why-content p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* ========== 6. 報價流程 ========== */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      z-index: 1;
+    }
+
+    .step-content h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .cta-box {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      max-width: 480px;
+      margin: 0 auto;
+      color: #fff;
+    }
+
+    .cta-box p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+
+    .cta-box .btn-whatsapp {
+      font-size: 18px;
+      padding: 15px 32px;
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ========== 平板以上 ========== */
+    @media (min-width: 640px) {
+      .hero {
+        padding: 40px 24px 48px;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .section {
+        padding: 52px 24px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+        max-width: 720px;
+      }
+
+      .cases {
+        max-width: 720px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .packages {
+        max-width: 760px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .package-card {
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .header {
+        padding: 14px 32px;
+      }
+
+      .hero {
+        padding: 48px 32px 56px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 60px 32px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-full {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .section-full .section-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -126,12 +769,12 @@
   <header class="header">
     <div class="logo">
       <div class="logo-icon">
-        <img src="images/logo.png" alt="雍藝裝飾工程公司標誌" width="360" height="302" decoding="async">
+        <img src="images/logo.png" alt="雍藝裝飾工程公司">
       </div>
       <span class="logo-text">雍藝裝飾工程公司</span>
     </div>
     <div class="header-right">
-      <a href="/en" class="lang-btn">EN</a>
+      <a href="en.html" class="lang-btn">EN</a>
       <a href="tel:+85260184057" class="phone-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         60184057
@@ -148,7 +791,7 @@
       <span>WhatsApp 免費報價</span>
     </a>
     <div class="hero-img-wrap">
-      <img src="images/case3-after.jpg" alt="雍藝完成的香港住宅客廳裝修實例" width="1280" height="966" fetchpriority="high" decoding="async">
+      <img src="images/case3-after.jpg" alt="香港住宅裝修實例">
     </div>
   </section>
 
@@ -174,7 +817,6 @@
           <li>連工包料</li>
         </ul>
         <p class="package-note">唔包鏟底，舊底狀況日後有機會起泡或鬆灰，不包保養。啱牆身無大問題、適合放租或想慳錢翻新的客人。</p>
-        <p class="package-link"><a href="/painting">睇油漆工程詳情 →</a></p>
       </div>
 
       <!-- 卡 2：全鏟批灰油漆 -->
@@ -193,7 +835,6 @@
           <li>完工執漏一次</li>
         </ul>
         <p class="package-note">全屋鏟底，確保新牆身耐用，啱新居入伙準備長期居住的客人。</p>
-        <p class="package-link"><a href="/painting">睇油漆工程詳情 →</a></p>
       </div>
 
       <!-- 卡 3：SPC 地板安裝 -->
@@ -211,7 +852,6 @@
           <li>完工清潔</li>
         </ul>
         <p class="package-note">未包含地台盪平工程，要睇現場。</p>
-        <p class="package-link"><a href="/flooring">睇地板工程詳情 →</a></p>
       </div>
 
       <!-- 卡 4：石屎剝落（士波令）維修 -->
@@ -228,7 +868,6 @@
           <li>選用專業奧迪美物料修補，再批灰油漆還原，細位維修 1-2 日搞掂</li>
         </ul>
         <p class="package-note">大面積剝落要上門睇先報到準價。</p>
-        <p class="package-link"><a href="/spalling">睇士波令維修詳情 →</a></p>
       </div>
     </div>
 
@@ -236,7 +875,6 @@
     <div class="addon-bar">
       <h3>想一次過搞掂埋傢俬？</h3>
       <p>衣櫃、鞋櫃、電視櫃都可以訂製，上門度尺，度身訂做。唔設固定套餐價，要睇尺寸同物料先報到準價。</p>
-      <p class="package-link"><a href="/custom-furniture">睇訂製傢俬詳情 →</a></p>
       <a href="https://wa.me/85260184057?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E5%95%8F%E8%A3%9D%E4%BF%AE%E5%A0%B1%E5%83%B9" class="btn-whatsapp" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>WhatsApp 問傢俬報價</span>
@@ -258,11 +896,11 @@
         </div>
         <div class="case-images">
           <div class="case-img-box">
-            <img src="images/case1-before.jpg" alt="案例一：住宅單位裝修前，牆身起泡甩皮" width="1280" height="960" loading="lazy" decoding="async">
+            <img src="images/case1-before.jpg" alt="Before">
             <span class="case-label">裝修前</span>
           </div>
           <div class="case-img-box">
-            <img src="images/case1-after.jpg" alt="案例一：住宅單位執灰批灰及全屋油漆翻新後" width="1280" height="966" loading="lazy" decoding="async">
+            <img src="images/case1-after.jpg" alt="After">
             <span class="case-label">裝修後</span>
           </div>
         </div>
@@ -277,11 +915,11 @@
         </div>
         <div class="case-images">
           <div class="case-img-box">
-            <img src="images/case2-before.jpg" alt="案例二：客廳裝修前，牆身原本舊黃色" width="1280" height="960" loading="lazy" decoding="async">
+            <img src="images/case2-before.jpg" alt="Before">
             <span class="case-label">裝修前</span>
           </div>
           <div class="case-img-box">
-            <img src="images/case2-after.jpg" alt="案例二：客廳全鏟批灰後油白色，空間更光猛" width="1280" height="966" loading="lazy" decoding="async">
+            <img src="images/case2-after.jpg" alt="After">
             <span class="case-label">裝修後</span>
           </div>
         </div>
@@ -296,11 +934,11 @@
         </div>
         <div class="case-images">
           <div class="case-img-box">
-            <img src="images/case3-before.jpg" alt="案例三：客廳裝修前，舊地板及舊牆身" width="1280" height="966" loading="lazy" decoding="async">
+            <img src="images/case3-before.jpg" alt="Before">
             <span class="case-label">裝修前</span>
           </div>
           <div class="case-img-box">
-            <img src="images/case3-after.jpg" alt="案例三：客廳鋪 SPC 淺木色地板及牆身油漆翻新後" width="1280" height="966" loading="lazy" decoding="async">
+            <img src="images/case3-after.jpg" alt="After">
             <span class="case-label">裝修後</span>
           </div>
         </div>
@@ -384,50 +1022,9 @@
     </div>
   </section>
 
-  <!-- 7. 常見問題 -->
-  <section class="section" id="faq">
-    <h2 class="section-title">常見問題</h2>
-    <p class="section-desc">關於價錢、施工同流程，客人最常問嘅幾條</p>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3>裝修套餐價錢包唔包工料？</h3>
-        <p>上面列出的套餐價錢已包工料。訂製傢俬因為尺寸、物料及設計不同，需要先度尺再報價。</p>
-      </div>
-      <div class="faq-item">
-        <h3>400 呎單位參考價係點計？</h3>
-        <p>套餐以 400 呎 2 房單位作參考。實際價錢會按單位面積、牆身及地台狀況、工程範圍調整，睇相或上門視察後可報準價。</p>
-      </div>
-      <div class="faq-item">
-        <h3>士波令（石屎剝落）可以點維修？</h3>
-        <p>會先鏟走所有鬆脫部份，補上防鏽塗層，用專業物料修補後再批灰油漆還原。細範圍維修一般 1 至 2 日完成，大面積要先上門視察。</p>
-      </div>
-      <div class="faq-item">
-        <h3>開工之後會唔會中途加價？</h3>
-        <p>一經確認價錢，不會中途加價。工程範圍以報價單為準，如需新增項目會先同你講清楚才做。</p>
-      </div>
-      <div class="faq-item">
-        <h3>公屋、居屋、私樓都會做嗎？</h3>
-        <p>公屋、居屋、私樓都有做開，熟悉管理處申請程序及交樓要求。</p>
-      </div>
-      <div class="faq-item">
-        <h3>報價要等幾耐？</h3>
-        <p>用 WhatsApp 傳單位面積及現場相片，一般即日可以回覆估價，唔需要等上門。</p>
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
     <p>雍藝裝飾工程公司 · 香港住宅裝修</p>
     <p style="margin-top:6px;"><span>電話：</span><a href="tel:+85260184057">60184057</a> · <a href="https://wa.me/85260184057?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E5%95%8F%E8%A3%9D%E4%BF%AE%E5%A0%B1%E5%83%B9" target="_blank" rel="noopener">WhatsApp</a></p>
-    <nav class="footer-nav" aria-label="頁面導覽">
-      <a href="#packages">裝修套餐價錢</a>
-      <a href="#cases">真實案例</a>
-      <a href="#why">點解揀我</a>
-      <a href="#process">報價流程</a>
-      <a href="#faq">常見問題</a>
-      <a href="/en">English</a>
-    </nav>
   </footer>
 </body>
 </html>
