@@ -1,0 +1,6 @@
+# Do not publish deployment configuration or repository metadata as assets.
+wrangler.jsonc
+.assetsignore
+.git/
+node_modules/
+.wrangler*/
