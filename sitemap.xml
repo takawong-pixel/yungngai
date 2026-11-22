@@ -1,33 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yungngai.com/</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>雍藝完成的香港住宅客廳裝修實例</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
+      <image:title>案例一：住宅單位裝修前，牆身起泡甩皮</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>案例一：住宅單位執灰批灰及全屋油漆翻新後</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-before.jpg</image:loc>
+      <image:title>案例二：客廳裝修前，牆身原本舊黃色</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>案例二：客廳全鏟批灰後油白色</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-before.jpg</image:loc>
+      <image:title>案例三：客廳裝修前，舊地板及舊牆身</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>案例三：客廳鋪 SPC 淺木色地板及油漆翻新後</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/en</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>A Hong Kong living room renovated by Yung Ngai Decoration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
+      <image:title>Project 1 before renovation: bubbling and peeling paint</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>Project 1 after skimming and repainting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-before.jpg</image:loc>
+      <image:title>Project 2 living room before renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>Project 2 living room after full skimming and white repaint</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-before.jpg</image:loc>
+      <image:title>Project 3 living room before renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>Project 3 living room after SPC flooring and repainting</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/painting</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>全鏟批灰油漆後的香港住宅客廳</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>執灰油漆翻新後的住宅單位</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/en/painting</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>Living room after full skim coat and repaint in Hong Kong</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>Flat after touch-up and repainting</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/flooring</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>香港住宅鋪 SPC 淺木色地板後的客廳</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-before.jpg</image:loc>
+      <image:title>鋪地板前的舊地板及牆身</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/en/flooring</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
+      <image:title>Living room after SPC light-wood flooring in Hong Kong</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case3-before.jpg</image:loc>
+      <image:title>The old floor before installation</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/spalling</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
+      <image:title>士波令維修前的牆身狀況</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>士波令維修及油漆還原後</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/en/spalling</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
+      <image:title>Wall condition before concrete spalling repair</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case1-after.jpg</image:loc>
+      <image:title>After spalling repair and repainting</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/custom-furniture</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>訂製傢俬配合全屋裝修完成後的單位</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://yungngai.com/en/custom-furniture</loc>
+    <image:image>
+      <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
+      <image:title>Flat finished with custom furniture and renovation</image:title>
+    </image:image>
   </url>
 </urlset>
