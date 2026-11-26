@@ -3,6 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yungngai.com/</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
       <image:title>雍藝完成的香港住宅客廳裝修實例</image:title>
@@ -34,6 +35,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/en</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
       <image:title>A Hong Kong living room renovated by Yung Ngai Decoration</image:title>
@@ -65,6 +67,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/painting</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
       <image:title>全鏟批灰油漆後的香港住宅客廳</image:title>
@@ -76,6 +79,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/en/painting</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
       <image:title>Living room after full skim coat and repaint in Hong Kong</image:title>
@@ -87,6 +91,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/flooring</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
       <image:title>香港住宅鋪 SPC 淺木色地板後的客廳</image:title>
@@ -98,6 +103,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/en/flooring</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case3-after.jpg</image:loc>
       <image:title>Living room after SPC light-wood flooring in Hong Kong</image:title>
@@ -109,6 +115,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/spalling</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
       <image:title>士波令維修前的牆身狀況</image:title>
@@ -120,6 +127,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/en/spalling</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case1-before.jpg</image:loc>
       <image:title>Wall condition before concrete spalling repair</image:title>
@@ -131,6 +139,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/custom-furniture</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
       <image:title>訂製傢俬配合全屋裝修完成後的單位</image:title>
@@ -138,6 +147,7 @@
   </url>
   <url>
     <loc>https://yungngai.com/en/custom-furniture</loc>
+    <lastmod>2026-11-23T03:21:49+08:00</lastmod>
     <image:image>
       <image:loc>https://yungngai.com/images/case2-after.jpg</image:loc>
       <image:title>Flat finished with custom furniture and renovation</image:title>
